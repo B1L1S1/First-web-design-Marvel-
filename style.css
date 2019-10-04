@@ -1,0 +1,346 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 3px;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.col{
+    float: left;
+    width: 100%;
+    padding: 1rem;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Bootstrap Breakpoints*/
+@media (min-width:576px){
+    
+    html{
+        font-size: 3px;
+    }
+    .col{
+        width: 100%;
+    }
+
+}
+@media (min-width:768px){
+
+    html{
+        font-size: 4px;
+    }
+    .col{
+        width: 50%;
+    }
+
+}
+@media (min-width:992px){
+    html{
+        font-size: 6px;
+    }
+    .col{
+        width: 25%;
+    }
+
+}
+@media (min-width:1200px){
+
+    html{
+        font-size: 10px;
+    }
+
+}
+
+/*navbar*/
+nav{
+    display:block;
+    position: sticky;
+    width: 100%;
+    background-color: #22262A;
+    top: 0;
+    height: auto;
+    padding: 2rem .4rem;
+    font-family: 'Titillium Web', sans-serif;
+    z-index: 500;
+}
+.nav-links .nav-item{
+    float: left;
+    margin-left: 4rem;
+}
+.nav-links .nav-link{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    transition: all .3s;
+}
+.nav-item:hover .nav-link{
+    color: rgba(230, 21, 21, 0.89);
+}
+.icon{
+    float: left;
+    margin-right: .3rem;
+}
+/*header*/
+header{
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background-color:#22262A;
+}
+header .marvel-head{
+    border-bottom: 1px solid white;
+    position: absolute;
+    width: 50rem;
+    height: 10rem;
+    left: 35%;
+}
+
+/*background-image*/
+#background-image{
+    position: relative;
+    height: 40rem;
+}
+#background-image .marvel-img{
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+}
+/*marvel-story*/
+#marvel-story{
+    background-color: #22262A;
+    text-align: center;
+    color: #fff;
+}
+#marvel-story h2{
+    font-size: 4.8rem;
+    padding-top: 2rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px white
+}
+.p-story{
+    font-size: 1.6rem;
+    padding: 2.5rem 6rem;
+    font-family: 'Raleway', sans-serif;
+    word-spacing: .3rem;
+    letter-spacing: .15rem;
+}
+.p-story a{
+    color: rgb(252, 41, 41);
+}
+/*select-characters*/
+#select-characters{
+    height: 25rem;
+    text-align: center;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/theavengers_lob_mas_dsk_03_1.jpg");
+    background-position-y: -5.5rem;
+    padding-top: 1rem;
+}
+#select-characters h3{
+    font-size:3rem;
+    color:#fff;
+    text-shadow: 2px 2px 3px #000000;
+    padding: 2rem;
+}
+.select-icon{
+    float: left;
+}
+.select-btn{
+    border: 1px solid rgb(233, 56, 56);
+    border-radius: .5rem;
+    margin: 2rem 1.45rem;
+    padding: .5rem;
+    font-size: 1.7rem;
+    background-color: #fff;
+    width: 18.5rem;
+    height: 4.82rem;
+    color: #22262A;
+    float: left;
+    transition: all .5s;
+    cursor: pointer;
+    float: left;
+    /*icon ve yazıyı ortalamak için*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select-btn:hover{
+    background: rgb(233, 56, 56);
+    color:#fff;
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, .8);
+    width: 20rem;
+    height: 5.3rem;
+}
+/*image-gallery*/
+#image-gallery{
+    text-align: center;
+    background: #fff;
+    padding-top: 1rem;
+}
+#image-gallery h2{
+    text-shadow: 1px 1px 2px #22262A, 0 0 25px #22262A, 0 0 5px white;
+    font-size: 4.2rem;
+    padding: 4rem 0;
+    color: #22262A;
+}
+.marvel-item{
+    position: relative;
+    cursor: pointer;
+}
+.marvel-item:hover{
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, .8);
+}
+.marvel-item img{
+    display: block;
+}
+.img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(142, 255, 255);
+    opacity: 0;
+    transition: opacity .7s ease;
+}
+.img-overlay .icon{
+    color:rgb(51, 55, 59);
+    position: absolute;
+    font-size: 2.4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.marvel-item:hover .img-overlay{
+    opacity: 0.4;
+}
+/*Contact*/
+#contact{
+    text-align: center;
+}
+#contact h2{
+    font-size: 4.2rem;
+    margin: 3rem;
+    color: #22262A;
+    text-shadow: 2px 2px 3px #000000;
+    transition: font-size 0.5s;
+}
+#contact h2:hover{
+    font-size: 4.8rem;
+}
+#contact-form{
+    width: 75%;
+    margin: 0 auto;
+}
+.form-group{
+    border-bottom: 1px solid rgb(226, 226, 226);
+    margin-bottom: 3rem;
+    padding-bottom: 4rem;
+    
+}
+.form-group input:focus,.form-group textarea:focus{
+    outline: none;
+}
+.form-group input,.form-group textarea{
+    display: block;
+    border: none;
+    width: 100%;
+    font-size: 2.4rem;
+}
+.form-btn{
+    float: left;
+    margin-top: -2rem;
+}
+.btn-send{
+    color: #fff;
+    padding: 1.5rem 2.5rem;
+    background: #22262A;
+    border: none;
+    cursor: pointer;
+    font-size: 2.4rem;
+    border-radius: 4px;
+    transition: all .5s;
+}
+.btn-send:hover{
+    color: #fff;
+    background: red;
+}
+/*Footer*/
+footer{
+    margin-top: 10rem;
+    padding: 6rem 0;
+    background-color: #22262A;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+footer h2{
+    font-size: 2.8rem;
+}
+footer p{
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+footer li{
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 4rem;
+}
+.btn-circular{
+    background: #22262A;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.btn-circular:hover{
+    background: #fff;
+    color: #22262A;
+}
+.support li{
+    display: block;
+}
+.support a{
+    font-size: 2.4rem;
+    color: #fff;
+}
+.support a:hover{
+    color: red;
+}
+.copyright{
+    padding: 2.4rem 0;
+    background-color: rgb(29, 28, 28);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
